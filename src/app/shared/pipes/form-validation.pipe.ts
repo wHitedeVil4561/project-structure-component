@@ -12,8 +12,6 @@ export class FormValidationPipe implements PipeTransform {
     errorDirective: ErrorHintDirective,
     touched: boolean | null
   ): string {
-    console.log(errorDirective);
-
     const errors = Object.entries(errorObj ?? {});
     if (!errors.length || !touched) return '';
     const controlName =

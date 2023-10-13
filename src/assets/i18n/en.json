@@ -11,5 +11,8 @@
   "PHONE": "Phone",
   "CONFIRM_PASSWORD": "Confirm Password",
   "SIGN-UP": "Sign-up",
-  "ALREADY_AN_ACCOUNT?": "Already an account?"
+  "ALREADY_AN_ACCOUNT?": "Already an account?",
+  "STREET/FLAT/COLONY": "Street/Flat/Colony",
+  "LANDMARK": "Landmark",
+  "PINCODE": "Pincode"
 }

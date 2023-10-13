@@ -30,6 +30,9 @@
         {{ "FORGOT_PASSWORD?" | translate }}
       </div>
     </div>
+    <app-common-address-form
+      [parentFormGroup]="loginForm"
+    ></app-common-address-form>
     <div class="form-item flex flex-col items-center gap-2 justify-center">
       <button
         class="w-3/5 bg-blue py-3 rounded text-white font-semibold text-xl font-source"

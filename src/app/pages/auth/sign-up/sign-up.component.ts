@@ -11,6 +11,7 @@ import {
 import { ErrorHintDirective } from 'src/app/shared/directives/error-hint.directive';
 import { FormFieldComponent } from 'src/app/shared/components/form-field/form-field.component';
 import { FORM_VALIDATION } from 'src/app/config/form-validation.constant';
+import { CommonAddressFormComponent } from 'src/app/shared/components/common-address-form/common-address-form.component';
 
 @Component({
   selector: 'app-sign-up',
@@ -22,6 +23,7 @@ import { FORM_VALIDATION } from 'src/app/config/form-validation.constant';
     ReactiveFormsModule,
     ErrorHintDirective,
     FormFieldComponent,
+    CommonAddressFormComponent,
   ],
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.scss'],
@@ -34,5 +36,10 @@ export class SignUpComponent {
     phone: ['', FORM_VALIDATION.phone],
     password: ['', FORM_VALIDATION.password],
     confirm_password: [''],
+    address: this.fb.group({
+      street: ['', FORM_VALIDATION.street],
+      landmark: ['', FORM_VALIDATION.landmark],
+      pincode: ['', FORM_VALIDATION.pinCode],
+    }),
   });
 }

@@ -11,5 +11,8 @@
   "PHONE": "फ़ोन",
   "CONFIRM_PASSWORD": "पासवर्ड की पुष्टि कीजिये",
   "SIGN-UP": "साइन अप करें",
-  "ALREADY_AN_ACCOUNT?": "पहले से ही एक खाता?"
+  "ALREADY_AN_ACCOUNT?": "पहले से ही एक खाता?",
+  "STREET/FLAT/COLONY": "स्ट्रीट/फ्लैट/कॉलोनी",
+  "LANDMARK": "सीमाचिह्न",
+  "PINCODE": "पिन कोड"
 }

@@ -14,4 +14,15 @@ export const FORM_VALIDATION = {
     Validators.maxLength(100),
   ],
   phone: [Validators.required, Validators.pattern(REGEX_CONSTANT.phone)],
+  street: [
+    Validators.required,
+    Validators.minLength(2),
+    Validators.maxLength(100),
+  ],
+  landmark: [Validators.minLength(2), Validators.maxLength(100)],
+  pinCode: [
+    Validators.required,
+    Validators.minLength(6),
+    Validators.maxLength(6),
+  ],
 };
