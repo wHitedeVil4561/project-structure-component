@@ -9,6 +9,8 @@ import {
   Validators,
 } from '@angular/forms';
 import { ErrorHintDirective } from 'src/app/shared/directives/error-hint.directive';
+import { TranslateModule } from '@ngx-translate/core';
+import { FORM_VALIDATION } from 'src/app/config/form-validation.constant';
 
 @Component({
   selector: 'app-login',
@@ -19,6 +21,7 @@ import { ErrorHintDirective } from 'src/app/shared/directives/error-hint.directi
     ReactiveFormsModule,
     FormFieldComponent,
     ErrorHintDirective,
+    TranslateModule,
   ],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
@@ -26,7 +29,7 @@ import { ErrorHintDirective } from 'src/app/shared/directives/error-hint.directi
 export class LoginComponent {
   constructor(private fb: FormBuilder) {}
   loginForm: FormGroup = this.fb.group({
-    email_phone: ['', [Validators.required]],
-    password: ['', Validators.required],
+    email_phone: ['', FORM_VALIDATION.email_phone],
+    password: ['', FORM_VALIDATION.password],
   });
 }

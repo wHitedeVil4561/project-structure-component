@@ -12,7 +12,7 @@ module.exports = {
         "light-pink": "#f2d1e1",
         "dark-text": "#495057",
         "input-border": "#bfd1e3",
-        blue: "#906cf5",
+        blue: "#5959D9",
         darkpurple: "#e159a2",
       },
       boxShadow: {

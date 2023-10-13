@@ -1,10 +1,12 @@
 <div
   class="outlet shadow-lg p-5 max-w-[440px] mx-auto w-full flex flex-col gap-3 rounded-lg bg-white relative z-10"
 >
-  <div class="text-2xl font-semibold font-source mx-auto">Welcome back!</div>
+  <div class="text-2xl font-semibold font-source mx-auto">
+    {{ "WELCOME_BACK!" | translate }}
+  </div>
   <form class="flex flex-col gap-5" [formGroup]="loginForm">
     <div class="form-item flex flex-col gap-1">
-      <label>Email/Phone</label>
+      <label>{{ "EMAIL/PHONE" | translate }}</label>
       <app-form-field>
         <input
           appErrorHint
@@ -15,7 +17,7 @@
       </app-form-field>
     </div>
     <div class="form-item flex flex-col gap-1">
-      <label>Password</label>
+      <label>{{ "PASSWORD" | translate }}</label>
       <app-form-field>
         <input
           appErrorHint
@@ -24,16 +26,18 @@
           placeholder="Enter password"
         />
       </app-form-field>
-      <div class="text-blue flex justify-end">Forgot Password?</div>
+      <div class="text-blue flex justify-end">
+        {{ "FORGOT_PASSWORD?" | translate }}
+      </div>
     </div>
     <div class="form-item flex flex-col items-center gap-2 justify-center">
       <button
         class="w-3/5 bg-blue py-3 rounded text-white font-semibold text-xl font-source"
       >
-        Login
+        {{ "LOGIN" | translate }}
       </button>
       <a class="cursor-pointer" [routerLink]="['../signup']">
-        Create an account
+        {{ "CREATE_AN_ACCOUNT" | translate }}
       </a>
     </div>
   </form>
