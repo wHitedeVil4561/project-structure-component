@@ -1,0 +1,40 @@
+<div
+  class="outlet shadow-lg p-5 max-w-[440px] mx-auto w-full flex flex-col gap-3 rounded-lg bg-white relative z-10"
+>
+  <div class="text-2xl font-semibold font-source mx-auto">Welcome back!</div>
+  <form class="flex flex-col gap-5" [formGroup]="loginForm">
+    <div class="form-item flex flex-col gap-1">
+      <label>Email/Phone</label>
+      <app-form-field>
+        <input
+          appErrorHint
+          formControlName="email_phone"
+          class="form-input border h-12 rounded w-full px-5 form-control"
+          placeholder="Enter email/phone"
+        />
+      </app-form-field>
+    </div>
+    <div class="form-item flex flex-col gap-1">
+      <label>Password</label>
+      <app-form-field>
+        <input
+          appErrorHint
+          formControlName="password"
+          class="form-input border h-12 rounded w-full px-5 form-control"
+          placeholder="Enter password"
+        />
+      </app-form-field>
+      <div class="text-blue flex justify-end">Forgot Password?</div>
+    </div>
+    <div class="form-item flex flex-col items-center gap-2 justify-center">
+      <button
+        class="w-3/5 bg-blue py-3 rounded text-white font-semibold text-xl font-source"
+      >
+        Login
+      </button>
+      <a class="cursor-pointer" [routerLink]="['../signup']">
+        Create an account
+      </a>
+    </div>
+  </form>
+</div>

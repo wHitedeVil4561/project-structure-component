@@ -1,49 +1,37 @@
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
-@use "@angular/material" as mat;
-// Plus imports for other components in your app.
-
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-@include mat.core();
-
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$project-structure-primary: mat.define-palette(mat.$indigo-palette);
-$project-structure-accent: mat.define-palette(
-  mat.$pink-palette,
-  A200,
-  A100,
-  A400
-);
-
-// The warn palette is optional (defaults to red).
-$project-structure-warn: mat.define-palette(mat.$red-palette);
-
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
-$project-structure-theme: mat.define-light-theme(
-  (
-    color: (
-      primary: $project-structure-primary,
-      accent: $project-structure-accent,
-      warn: $project-structure-warn,
-    ),
-  )
-);
-
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include mat.all-component-themes($project-structure-theme);
-
+@import "app/styles/material/theme.scss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 /* You can add global styles to this file, and also import other style files */
-
+@layer base {
+  .linear-gradient-1 {
+    background: linear-gradient(to top, #906cf5, #e159a2);
+  }
+  .linear-gradient-2 {
+    background: linear-gradient(109.08deg, #4568dc 0%, #b06ab3 98.01%);
+  }
+  .linear-gradient-3 {
+    background: linear-gradient(109.08deg, #23e1b4 0%, #088e6e 98.01%);
+  }
+  .linear-gradient-4 {
+    background: linear-gradient(109.08deg, #36d1dc 0%, #5b86e5 98.01%);
+  }
+  .linear-gradient-5 {
+    background: linear-gradient(109.08deg, #a4d0d8 0%, #4ca1af 98.01%);
+  }
+  .form-input {
+    &:focus {
+      outline-color: #5b86e5;
+    }
+    &.ng-invalid.ng-touched {
+      outline-color: red !important;
+      border-color: red;
+    }
+  }
+}
 html,
 body {
   height: 100%;
@@ -51,4 +39,20 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+@font-face {
+  font-family: "comic-neue";
+  src: url("./assets/font/ComicNeue-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "roboto";
+  src: url("./assets/font/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "lato";
+  src: url("./assets/font/Lato-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "source";
+  src: url("./assets/font/SourceSansPro-Regular.ttf") format("truetype");
 }

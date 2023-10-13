@@ -1,0 +1,62 @@
+<div
+  class="outlet shadow-lg p-5 max-w-[600px] mx-auto w-full flex flex-col gap-3 rounded-lg bg-white relative z-10"
+>
+  <div class="text-2xl font-semibold font-source mx-auto">Welcome!</div>
+  <form class="flex flex-col gap-5">
+    <div class="grid grid-cols-1 md:grid-cols-2 md:gap-x-6 gap-y-6">
+      <div class="form-item flex flex-col gap-1">
+        <label>Name</label>
+        <input
+          class="form-input border h-12 rounded w-full px-5 form-control"
+          placeholder="Enter name"
+        />
+      </div>
+      <div class="form-item flex flex-col gap-1">
+        <label>Email</label>
+        <input
+          class="form-input border h-12 rounded w-full px-5 form-control"
+          placeholder="Enter email"
+        />
+      </div>
+      <div class="form-item flex flex-col gap-1">
+        <label>Phone</label>
+        <input
+          class="form-input border h-12 rounded w-full px-5 form-control"
+          placeholder="Enter phone"
+        />
+      </div>
+      <div class="form-item flex flex-col gap-1">
+        <label>Password</label>
+        <input
+          class="form-input border h-12 rounded w-full px-5 form-control"
+          placeholder="Enter password"
+        />
+      </div>
+      <div class="form-item flex flex-col gap-1">
+        <label>Confirm Password</label>
+        <input
+          class="form-input border h-12 rounded w-full px-5 form-control"
+          placeholder="Enter confirm password"
+        />
+      </div>
+    </div>
+    <div class="form-item flex flex-col items-center gap-2 justify-center">
+      <button
+        type="button"
+        class="w-3/5 bg-blue py-3 rounded text-white font-semibold text-xl font-source"
+        routerLink="/"
+      >
+        Sign-up
+      </button>
+      <span class="cursor-pointer"
+        >Already an account?
+        <span
+          class="text-blue font-semibold text-lg"
+          [routerLink]="['../login']"
+        >
+          Login
+        </span>
+      </span>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,14 @@
+<div class="">
+  <ng-content></ng-content>
+  <div
+    class="text-red-400 text-sm"
+    *ngIf="errorHintDirective.ngControl.control?.errors"
+  >
+    {{
+      errorHintDirective.ngControl.control?.errors
+        | formValidation
+          : errorHintDirective
+          : errorHintDirective.ngControl.touched
+    }}
+  </div>
+</div>
