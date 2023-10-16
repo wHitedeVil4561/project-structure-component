@@ -1,1 +1,15 @@
-<p>otp works!</p>
+<ng-container [formGroup]="otpForm">
+  <div class="flex items-center w-full gap-3" formArrayName="otp">
+    <ng-container *ngFor="let control of otpInput.controls; let i = index">
+      <input
+        oninput="this.value = this.value.replace(/\D/,'')"
+        (keyup)="keyUpEvent($event, i)"
+        [id]="'input' + i"
+        [formControlName]="i"
+        class="form-input w-12 h-12 border border-mandarin rounded-md shadow-md p-2 text-center text-xl"
+        type="text"
+        maxlength="1"
+      />
+    </ng-container>
+  </div>
+</ng-container>

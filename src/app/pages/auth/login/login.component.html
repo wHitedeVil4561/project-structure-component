@@ -4,7 +4,11 @@
   <div class="text-2xl font-semibold font-source mx-auto">
     {{ "WELCOME_BACK!" | translate }}
   </div>
-  <form class="flex flex-col gap-5" [formGroup]="loginForm">
+  <form
+    class="flex flex-col gap-5"
+    [formGroup]="loginForm"
+    (ngSubmit)="onSubmit()"
+  >
     <div class="form-item flex flex-col gap-1">
       <label>{{ "EMAIL/PHONE" | translate }}</label>
       <app-form-field>
@@ -30,9 +34,14 @@
         {{ "FORGOT_PASSWORD?" | translate }}
       </div>
     </div>
-    <app-common-address-form
-      [parentFormGroup]="loginForm"
-    ></app-common-address-form>
+    <app-common-address-form></app-common-address-form>
+    <!-- <app-form-field>
+      <app-otp
+        [config]="{ length: 4 }"
+        appErrorHint
+        formControlName="otp"
+      ></app-otp>
+    </app-form-field> -->
     <div class="form-item flex flex-col items-center gap-2 justify-center">
       <button
         class="w-3/5 bg-blue py-3 rounded text-white font-semibold text-xl font-source"

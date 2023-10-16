@@ -1,14 +1,15 @@
-import { Component, Input, forwardRef } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   ControlContainer,
+  FormBuilder,
   FormGroup,
-  FormGroupName,
   ReactiveFormsModule,
 } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { FormFieldComponent } from '../form-field/form-field.component';
 import { ErrorHintDirective } from '../../directives/error-hint.directive';
+import { FORM_VALIDATION } from 'src/app/config/form-validation.constant';
 
 @Component({
   selector: 'app-common-address-form',
@@ -25,10 +26,26 @@ import { ErrorHintDirective } from '../../directives/error-hint.directive';
   viewProviders: [
     {
       provide: ControlContainer,
-      useExisting: forwardRef(() => FormGroupName),
+      useFactory: () => inject(ControlContainer, { skipSelf: true }),
     },
   ],
 })
-export class CommonAddressFormComponent {
-  @Input({ required: true }) parentFormGroup!: FormGroup;
+export class CommonAddressFormComponent implements OnInit {
+  fb: FormBuilder = inject(FormBuilder);
+  parentContainer = inject(ControlContainer);
+  get parentFormGroup() {
+    return this.parentContainer.control as FormGroup;
+  }
+  ngOnInit(): void {
+    console.log(this.parentContainer);
+
+    this.parentFormGroup.addControl(
+      'address',
+      this.fb.group({
+        street: ['', FORM_VALIDATION.street],
+        landmark: ['', FORM_VALIDATION.landmark],
+        pincode: ['', FORM_VALIDATION.pinCode],
+      })
+    );
+  }
 }

@@ -14,5 +14,9 @@
   "ALREADY_AN_ACCOUNT?": "पहले से ही एक खाता?",
   "STREET/FLAT/COLONY": "स्ट्रीट/फ्लैट/कॉलोनी",
   "LANDMARK": "सीमाचिह्न",
-  "PINCODE": "पिन कोड"
+  "PINCODE": "पिन कोड",
+  "OTP_SENT_TO_YOUR_REGISTERED_MOBILE_NO.": "OTP ने आपके पंजीकृत मोबाइल नं।",
+  "SUBMIT": "जमा करना",
+  "CANCEL": "रद्द करना",
+  "PLEASE_ENTER_OTP_SENT_TO_YOUR_REGISTERED_MOBILE_NO.": "कृपया अपने पंजीकृत मोबाइल नंबर पर भेजे गए OTP दर्ज करें।"
 }

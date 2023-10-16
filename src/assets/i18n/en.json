@@ -14,5 +14,9 @@
   "ALREADY_AN_ACCOUNT?": "Already an account?",
   "STREET/FLAT/COLONY": "Street/Flat/Colony",
   "LANDMARK": "Landmark",
-  "PINCODE": "Pincode"
+  "PINCODE": "Pincode",
+  "OTP_SENT_TO_YOUR_REGISTERED_MOBILE_NO.": "Otp sent to your registered mobile no.",
+  "SUBMIT": "Submit",
+  "CANCEL": "Cancel",
+  "PLEASE_ENTER_OTP_SENT_TO_YOUR_REGISTERED_MOBILE_NO.": "Please enter otp sent to your registered mobile no."
 }

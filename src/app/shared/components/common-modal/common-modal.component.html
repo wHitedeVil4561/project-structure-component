@@ -1,0 +1,22 @@
+<div mat-dialog-content>
+  <p>{{ "OTP_SENT_TO_YOUR_REGISTERED_MOBILE_NO." | translate }}</p>
+  <p>{{ "PLEASE_ENTER_OTP_SENT_TO_YOUR_REGISTERED_MOBILE_NO." | translate }}</p>
+  <app-otp [config]="{ length: 4 }" [formControl]="otp"></app-otp>
+</div>
+<div mat-dialog-actions class="">
+  <div class="flex justify-end gap-4 w-full pr-4 pb-4">
+    <button
+      class="px-5 py-2 border rounded-md"
+      mat-button
+      (click)="matdialogRef.close()"
+    >
+      {{ "CANCEL" | translate }}
+    </button>
+    <button
+      class="px-5 py-2 border rounded-md border-blue bg-blue text-white"
+      mat-button
+    >
+      {{ "SUBMIT" | translate }}
+    </button>
+  </div>
+</div>
